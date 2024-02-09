@@ -58,6 +58,6 @@ This exercise will prepare you for the frontend interview. Read the instructions
 
 7. Display the body of the posts for the user that was clicked on. This means that when the user name is clicked, only posts for that user should be displayed. Posts for other users should not be displayed
 
-8. Write all of the code in the App.js file. Don't creat any new components
+8. Write all of the code in the App.js file. Don't create any new components
 
 

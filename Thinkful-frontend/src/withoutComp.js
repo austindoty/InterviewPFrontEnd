@@ -1,25 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-// Component to render a list of posts
-function PostsList({ posts }) {
-  // If there are no posts, return null (no rendering)
-  if (posts.length === 0) {
-    return null;
-  }
-
-  // If there are posts, render each post with a title and body
-  return (
-    <>
-      {posts.map((post) => (
-        <div key={post.id}>
-          <h3>{post.title}</h3>
-          <p>{post.body}</p>
-        </div>
-      ))}
-    </>
-  );
-}
-
 // Main App component
 function App() {
   // Define state variables to store users and their posts
@@ -80,7 +60,17 @@ function App() {
               {user.firstName} {user.lastName}
             </h3>
             {/* Conditionally render posts for the clicked user */}
-            <PostsList posts={postsMap[user.id]} />
+            {/* Conditionally render posts for the clicked user */}
+            {postsMap[user.id].length > 0 && (
+              <>
+                {postsMap[user.id].map((post) => (
+                  <div key={post.id}>
+                    <h3>{post.title}</h3>
+                    <p>{post.body}</p>
+                  </div>
+                ))}
+              </>
+            )}
           </div>
         ))}
       </div>
